@@ -57,20 +57,45 @@ console.log(addArrow(3, 4))
 
 // write a function declaration
 
-function computeArea(w, h) {
-  return `The area of a rectangle with a width of ${w} and a height of ${h} is ${w * h} square units`
+// function computeArea(w, h) {
+//   return `The area of a rectangle with a width of ${w} and a height of ${h} is ${w * h} square units`
+// }
+
+// console.log(computeArea(5, 25))
+
+function computeArea(width, height) {
+  // return 'The area of a rectangle with a width of ' + width + 'and a height of ' + height + ' is ' + width * height + ' square units'
+  return `The area of a rectangle with a width of ${width} and a height of ${height} is ${width * height} square units`
 }
 
-console.log(computeArea(5, 25))
+console.log(computeArea(5, 12))
 
 // write a fn expression
 
+/**
+ * write a function called planetHasWater as a *function expression*
+ * 
+ * it will have one parameter 'planet'
+ * 
+ * return true is 'Earth' or 'Mars', otherwise false
+ * 
+ * 
+ */
+
+// if the planet is Earth or if the planet is Mars
+// return true
+// or else false
+
 const planetHasWater = function(planet) {
-  if (planet === 'Earth') {
-  return true  
+  planet = planet.toUpperCase()
+  if (planet === 'EARTH' || planet === 'MARS') {
+    return true
   } else {
     return false
   }
 }
 
-console.log(planetHasWater('Venus'))
+console.log( planetHasWater('Earth') ) //=> true
+console.log( planetHasWater('Venus') ) //=> false
+// Test the bonus...
+console.log( planetHasWater('mArS') ) //=> true
