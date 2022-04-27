@@ -1,33 +1,27 @@
 console.log('hi')
 
-function main() {
-  let date = new Date()
-  let sales = getSalesData(date)
-  let labor = getLaborCosts(date)
-  let budget = getBudget(date)
-  let report = generateReport(date, sales, labor, budget)
-  sendReport(report)
+// WRITE SMALL FUNCTIONS THAT DO ONE TASK AT A TIME
+
+// THINK ABOUT REUSABILITY
+
+// THREE WAYS TO DEFINIE AND WRITE FUNCTIONS
+
+// 1. function declaration
+
+function greeting(name) {
+  console.log('Hello,', name)
+}
+greeting('Zuri')
+
+function greeting2(name) {
+  return 'hello, ' + name
 }
 
-// Run the main function
-main();
+console.log(greeting2('Anthony'))
 
-/*--- helper functions ---*/
-
-function getSalesData(forDate) {
-  let netSales = getNetSales(forDate)
-  let salesTax = computeSalesTax(netSales)
-  return {netSales, salesTax}
+function greeting3(name) {
+  return `Hello, ${name}`
 }
 
-function getLaborCosts(forDate) {
-  let staffCosts = getStaffCosts(forDate)
-  let mgtCosts = getMgtCosts(forDate)
-  return {staffCosts, mgtCosts}
-}
+console.log(greeting3('Hadley'))
 
-function getBudget(forDate) {
-  let salesBudget = getSalesBudget(forDate)
-  let laborBudget = getLaborBudget(forDate)
-  return {salesBudget, laborBudget}
-}
