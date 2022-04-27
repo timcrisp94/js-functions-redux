@@ -54,3 +54,23 @@ console.log(addArrow(3, 4))
 // it takes (params) => // do this thing
 
 // a function expression  
+
+// write a function declaration
+
+function computeArea(w, h) {
+  return `The area of a rectangle with a width of ${w} and a height of ${h} is ${w * h} square units`
+}
+
+console.log(computeArea(5, 25))
+
+// write a fn expression
+
+const planetHasWater = function(planet) {
+  if (planet === 'Earth') {
+  return true  
+  } else {
+    return false
+  }
+}
+
+console.log(planetHasWater('Venus'))
