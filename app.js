@@ -25,3 +25,32 @@ function greeting3(name) {
 
 console.log(greeting3('Hadley'))
 
+// 2. function expression -- function expressions are defined inside a variable
+
+const sayHi = function(name) {
+  console.log(`Hi, ${name}`)
+}
+
+sayHi('Lily')
+
+// differences between fn declaration and fe
+// syntax
+// in function declaration, you can invoke anywhere in the file - even before the function is defined
+// in function expression, you can only invoke after a function is defined
+
+// 3. arrow functions - act just like expressions, but have a different syntax
+
+function add(a, b) {
+  return a + b
+}
+
+let addedNums = add(3, 4)
+console.log(addedNums)
+
+let addArrow = (a, b) => a + b
+console.log(addArrow(3, 4))
+
+// arrow functions do not need the word function
+// it takes (params) => // do this thing
+
+// a function expression  
